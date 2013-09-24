@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="randomsModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script src="js/3-module.js"></script>
+    <script src="js/3-controller.js"></script>
+</head>
+
+<body ng-controller="RandomNumbersController">
+
+    <button ng-click="getValueFromService()">Generate random number</button>
+
+    {{ someValue }}
+
+</body>
+</html>
