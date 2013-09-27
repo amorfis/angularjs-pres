@@ -1,7 +1,7 @@
 function SzJugController($scope) {
   $scope.someValue = "hello"
 
-  $scope.callTimeService = function() {
+  $scope.getTime = function() {
     $scope.someValue = new Date()
   }
 }
