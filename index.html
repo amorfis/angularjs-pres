@@ -83,24 +83,44 @@
 </section>
 
 <section class="slide">
-    Bidirectional binding. Change the model - the display is changed too. Angular event loop.
+    <h2>Bidirectional binding. Change the model - the display is changed too. Angular event loop.</h2>
 </section>
 
 <section class="slide">
-    Controller
+    <h2>Controller</h2>
 </section>
 
 <section class="slide">
-    Testability
+    <h2>Testability</h2>
 </section>
 
 <section class="slide">
-    Module
+    <h2>Module</h2>
 </section>
 
 <section class="slide">
-    Add another module by DI
+    <h2>Add another module by DI</h2>
 </section>
+
+<section class="slide">
+
+    <h2>Directives</h2>
+    <p>Directive method returns Directive Definition Object. One of it's attributes is "scope". There following values apply:
+        <ul>
+            <li>@ - assigns DOM value to scope property. Always string, as DOM values are always strings.</li>
+            <li>= - sets up bi-directional binding between parent scope value and local scope property.</li>
+            <li>& - assigns expression from parent scope to local scope. Usually it is a function.</li>
+        </ul>
+        Another attribute is "restrict". It restricts directive to one HTML part:
+        <ul>
+            <li>E - HTML element</li>
+            <li>A - Attribute (default)</li>
+            <li>C - Class</li>
+            <li>M - Comment</li>
+        </ul>
+    </p>
+</section>
+
 
 
 ng-repeat
@@ -109,6 +129,7 @@ directives
 angular cycle
 ng-view
 rożne typy serwisow
+factory
 
 <!--<section>-->
     <!--Because there is dependency injection, when writing your controller unit tests, you can easily use a mock for one of the dependencies, which makes assertions much easier. A typically way to do this is use a mock when instantiate your controller. Or since Angular.js DI uses last win rule, you can rebind (override) your dependency by registering a fake implementation in the tests.-->
