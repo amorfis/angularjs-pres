@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="dependencyModule">
+<head>
+
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script src="js/4-dependency.js"></script>
+    <script src="js/4-controller.js"></script>
+    <script type="text/javascript" src="js/angular-ui-date.js"></script>
+
+    <link rel="stylesheet" href="js/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css"/>
+
+</head>
+
+<body ng-controller="DateController">
+
+    <button ng-click="getValueFromService()">Get date</button>
+    <button ng-click="addOneDay()">Add day</button>
+    <input type="text" ui-date ng-model="someValue"/>
+
+</body>
+</html>
