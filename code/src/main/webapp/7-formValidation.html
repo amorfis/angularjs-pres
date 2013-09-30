@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css"/>
+    <script src="js/7-validation.js"></script>
+
+</head>
+
+<body>
+
+    <form name="myForm" class="form-horizontal">
+        <div class="form-group">
+            <!-- Error on start -->
+            <input type="text" name="firstName" ng-model="firstName" ng-required="true">
+            <span ng-show="myForm.firstName.$error.required">Value is required! (But ma, I just opened this page)</span>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="surname" ng-model="surname" ng-required="true">
+            <span ng-show="myForm.surname.$error.required && myForm.surname.$dirty">Value required</span>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="age" ng-model="age" ng-required="true" ng-maxlength="3" ng-pattern="/^[0-9]*$/">
+            <span ng-show="myForm.age.$error.required && myForm.age.$dirty">Value required</span>
+            <span ng-show="myForm.age.$error.maxlength && myForm.age.$dirty">Too long</span>
+            <span ng-show="myForm.age.$error.pattern && myForm.age.$dirty">Only digits are valid</span>
+        </div>
+
+    </form>
+
+</body>
+</html>
