@@ -25,8 +25,8 @@ angular.module('directivesModule', [])
           loginFunction: "&"
         },
         link: function(scope) {
-          scope.login = function(username, password) {
-            scope.loginFunction( { username: username, password: password })
+          scope.login = function(user, pass) {
+            scope.loginFunction( { username: user, password: pass })
           }
         }
       }
